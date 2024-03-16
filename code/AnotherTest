@@ -1,0 +1,18 @@
+import os
+import numpy as np
+import polyscope as ps
+from skimage import measure
+from ReconstructionFunctions import load_off_file, compute_RBF_weights, evaluate_RBF, polyharmonic, Wendland, biharmonic
+import scipy as sp
+  
+def main():
+    dense = np.array([[1, 0, 0, 2], [0, 4, 1, 0], [0, 0, 5, 0]])
+    sparse = sp.sparse.coo_array(dense)
+    
+    cheese = sparse.tocsr()
+    
+    
+    print(cheese)
+    
+if __name__ == "__main__":
+    main()
